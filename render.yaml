@@ -19,8 +19,4 @@ services:
     staticPublishPath: frontend/dist
     envVars:
       - key: VITE_API_URL
-        fromService:
-          name: summora-backend
-          type: web
-          property: url
-          suffix: /api
+        value: https://summora-backend.onrender.com/api
