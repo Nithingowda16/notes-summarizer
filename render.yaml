@@ -1,0 +1,26 @@
+services:
+  # Python Flask Backend Web Service
+  - type: web
+    name: summora-backend
+    env: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: gunicorn --chdir backend app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: FLASK_ENV
+        value: production
+
+  # React static site frontend
+  - type: web
+    name: summora-frontend
+    env: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          name: summora-backend
+          type: web
+          property: url
+          suffix: /api

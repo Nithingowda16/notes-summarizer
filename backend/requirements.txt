@@ -4,3 +4,4 @@ PyPDF2==3.0.1
 sumy==0.11.0
 nltk==3.9.1
 yake==0.4.8
+gunicorn==22.0.0

@@ -1,7 +1,18 @@
 import os
+import nltk
 from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
 from nlp_engine import extract_text_from_pdf, calculate_analytics, generate_summary, extract_keywords, document_qa
+
+# Ensure NLTK resources are downloaded programmatically for offline/cloud environments
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords')
 
 app = Flask(__name__)
 # Enable CORS for frontend running on other ports (such as Vite on 5173/3000)

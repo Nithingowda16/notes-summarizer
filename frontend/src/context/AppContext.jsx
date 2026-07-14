@@ -86,7 +86,7 @@ export const AppProvider = ({ children }) => {
   const [backendStatus, setBackendStatus] = useState('checking'); // checking, connected, offline
   const [apiError, setApiError] = useState(null);
 
-  const API_URL = 'http://127.0.0.1:5000/api';
+  const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000/api';
 
   // Check connection to Flask backend on mount
   useEffect(() => {
