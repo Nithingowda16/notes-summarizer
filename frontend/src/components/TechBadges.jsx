@@ -28,7 +28,7 @@ export default function TechBadges() {
             Technology Stack
           </h2>
           <p className="text-base text-apple-secondary leading-relaxed">
-            Built using modern, lightweight frameworks and standard NLP libraries for optimal local performance.
+            Built using modern, lightweight frameworks and standard NLP libraries for optimal performance.
           </p>
         </div>
 

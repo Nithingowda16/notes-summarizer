@@ -56,7 +56,7 @@ export default function Intro() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-base md:text-lg text-apple-secondary leading-relaxed mb-10 max-w-xl"
             >
-              Stop spending hours reading lengthy documents. Our intelligent summarizer helps you quickly understand the most important information from any PDF while keeping your data completely local.
+              Stop spending hours reading lengthy documents. Our intelligent summarizer helps you quickly understand the most important information from any PDF while keeping your data completely secure.
             </motion.p>
             
             {/* Split cards list */}
@@ -102,7 +102,7 @@ export default function Intro() {
                 </div>
                 <div className="flex items-center gap-1.5 text-xs text-apple-secondary font-medium bg-white/50 px-3 py-1 rounded-full border border-apple-border/10">
                   <ShieldCheck size={14} className="text-emerald-500 animate-pulse" />
-                  <span>100% Secure & Local</span>
+                  <span>100% Secure</span>
                 </div>
               </div>
               
@@ -124,7 +124,7 @@ export default function Intro() {
                 <div className="col-span-5 p-4 bg-white/90 rounded-[20px] shadow-sm border border-apple-border/10 flex flex-col justify-between gap-3">
                   <div className="flex items-center gap-1.5">
                     <Zap size={13} className="text-amber-500" />
-                    <span className="text-[9px] uppercase font-bold text-apple-secondary">Local Performance</span>
+                    <span className="text-[9px] uppercase font-bold text-apple-secondary">Performance</span>
                   </div>
                   <div className="flex flex-col">
                     <span className="text-2xl font-bold text-apple-text leading-none">0ms</span>
@@ -142,7 +142,7 @@ export default function Intro() {
                       <BookOpen size={16} />
                     </div>
                     <div>
-                      <h5 className="text-[11px] font-bold text-apple-text">Local NLTK Corpus</h5>
+                      <h5 className="text-[11px] font-bold text-apple-text">NLTK Corpus</h5>
                       <p className="text-[9px] text-apple-secondary">Punkt sentence tokenizer & Stopwords databases loaded</p>
                     </div>
                   </div>

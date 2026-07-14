@@ -45,7 +45,7 @@ const MOCK_DOCS = {
       },
       {
         q: "What are the different sizes of Gemini?",
-        a: "Gemini models are scaled into four main configurations: 1) Ultra (flagship model for complex tasks), 2) Pro (versatile model for general scale), 3) Flash (fast, lightweight, cost-effective model), and 4) Nano (highly efficient model optimized for running locally on-device)."
+        a: "Gemini models are scaled into four main configurations: 1) Ultra (flagship model for complex tasks), 2) Pro (versatile model for general scale), 3) Flash (fast, lightweight, cost-effective model), and 4) Nano (highly efficient model optimized for running directly on-device)."
       },
       {
         q: "How was Gemini trained?",
@@ -77,7 +77,7 @@ export const AppProvider = ({ children }) => {
   const [chatHistory, setChatHistory] = useState([
     {
       sender: 'assistant',
-      text: 'Hello! I am your local AI assistant. Once you upload a PDF notes file, I can answer questions and help you study the material offline. Try uploading a file or explore the preloaded demo documents!'
+      text: 'Hello! I am your AI assistant. Once you upload a PDF notes file, I can answer questions and help you study the material offline. Try uploading a file or explore the preloaded demo documents!'
     }
   ]);
 
@@ -147,7 +147,7 @@ export const AppProvider = ({ children }) => {
           setChatHistory([
             {
               sender: 'assistant',
-              text: `I have finished processing "${uploadedFile.name}" locally in Demo Mode! Here is a summary. Ask me anything about this document.`
+              text: `I have finished processing "${uploadedFile.name}" in Demo Mode! Here is a summary. Ask me anything about this document.`
             }
           ]);
           
@@ -189,7 +189,7 @@ export const AppProvider = ({ children }) => {
       setChatHistory([
         {
           sender: 'assistant',
-          text: `Success! "${data.filename}" has been parsed and summarized locally. Feel free to ask questions about the text below!`
+          text: `Success! "${data.filename}" has been parsed and summarized. Feel free to ask questions about the text below!`
         }
       ]);
       
@@ -303,7 +303,7 @@ EXTRACTED KEYWORDS:
 ${keywords.join(', ')}
 
 ====================================================
-Processed locally. No external APIs were contacted.
+Processed privately. No external APIs were contacted.
 ====================================================`;
       
       const element = document.createElement("a");
@@ -337,7 +337,7 @@ Processed locally. No external APIs were contacted.
     setChatHistory([
       {
         sender: 'assistant',
-        text: 'Hello! I am your local AI assistant. Once you upload a PDF notes file, I can answer questions and help you study the material offline. Try uploading a file or explore the preloaded demo documents!'
+        text: 'Hello! I am your AI assistant. Once you upload a PDF notes file, I can answer questions and help you study the material offline. Try uploading a file or explore the preloaded demo documents!'
       }
     ]);
     setProgressStage('idle');

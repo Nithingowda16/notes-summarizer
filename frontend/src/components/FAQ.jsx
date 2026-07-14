@@ -6,19 +6,19 @@ export default function FAQ() {
   const faqs = [
     {
       q: "How does summarization work?",
-      a: "The application parses raw text from the uploaded PDF document using PyPDF2. This text is then passed to our local Python NLP module which utilizes the Sumy library. Sumy applies unsupervised extractive summarization models (like LSA or LexRank) to identify and group the most semantically important sentences based on document-wide word vector relationships."
+      a: "The application parses raw text from the uploaded PDF document using PyPDF2. This text is then passed to our Python NLP module which utilizes the Sumy library. Sumy applies unsupervised extractive summarization models (like LSA or LexRank) to identify and group the most semantically important sentences based on document-wide word vector relationships."
     },
     {
       q: "Is my document uploaded online?",
-      a: "No. Your documents are uploaded directly to a server running entirely on your local machine. No external web APIs or cloud storage networks are contacted, making it fully private and compliant with confidentiality guidelines. If the local API server is unavailable, the application toggles into interactive Demo Mode where data parsing is simulated purely in memory."
+      a: "No. Your documents are uploaded directly to a server running entirely on your machine. No external web APIs or cloud storage networks are contacted, making it fully private and compliant with confidentiality guidelines. If the API server is unavailable, the application toggles into interactive Demo Mode where data parsing is simulated purely in memory."
     },
     {
       q: "Do I need an API key?",
-      a: "No API keys are required. Unlike cloud-based systems that rely on Gemini Pro or OpenAI GPT models, this project is built entirely on open-source, local-first Python libraries that execute summarization and searching directly on your CPU."
+      a: "No API keys are required. Unlike cloud-based systems that rely on Gemini Pro or OpenAI GPT models, this project is built entirely on open-source Python libraries that execute summarization and searching directly on your CPU."
     },
     {
       q: "Can I chat with PDFs?",
-      a: "Yes. In the Document Chat section, you can submit questions using natural language. The system builds a local TF-IDF index of the document's sentences and evaluates their cosine similarity against your query, extracting the exact passage containing the most relevant answer."
+      a: "Yes. In the Document Chat section, you can submit questions using natural language. The system builds a TF-IDF index of the document's sentences and evaluates their cosine similarity against your query, extracting the exact passage containing the most relevant answer."
     },
     {
       q: "Can I download summaries?",

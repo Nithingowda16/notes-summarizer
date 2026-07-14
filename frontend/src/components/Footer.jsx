@@ -43,9 +43,9 @@ export default function Footer() {
         {/* Footer Top Links / Info */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-b border-apple-border/10 pb-8">
           <div className="flex flex-col gap-1.5">
-            <span className="font-bold text-apple-text text-sm">Summora — Local PDF Study Assistant</span>
+            <span className="font-bold text-apple-text text-sm">Summora — PDF Study Assistant</span>
             <p className="max-w-md leading-relaxed text-[11px]">
-              Developed as a local-first study aid demonstrating text extraction, sentence ranking algorithms, and similarity vector mapping without cloud dependencies.
+              Developed as an offline study aid demonstrating text extraction, sentence ranking algorithms, and similarity vector mapping without cloud dependencies.
             </p>
           </div>
           

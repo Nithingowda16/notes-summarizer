@@ -148,7 +148,7 @@ export default function Demo() {
           <p className="text-base text-apple-secondary leading-relaxed">
             {backendStatus === 'connected' 
               ? "Upload a PDF file below to extract summary, keywords, and analytics in real time."
-              : "Demo Mode Active. Select a preloaded note or drop a PDF to inspect the local summarizer's features."
+              : "Demo Mode Active. Select a preloaded note or drop a PDF to inspect the summarizer's features."
             }
           </p>
         </div>
@@ -167,16 +167,16 @@ export default function Demo() {
             
             {/* Address Bar */}
             <div className="bg-white/70 text-[10px] md:text-xs text-apple-secondary px-6 md:px-16 py-1.5 rounded-full border border-apple-border/10 flex items-center gap-1.5 select-none shadow-sm truncate max-w-xs md:max-w-md">
-              <span className="text-emerald-500 font-bold">● local-sec</span>
+              <span className="text-emerald-500 font-bold">● secure</span>
               <span className="text-apple-border">|</span>
-              <span className="truncate">summora.local/{filename || ''}</span>
+              <span className="truncate">summora.ai/{filename || ''}</span>
             </div>
             
             {/* Badge for Connection status */}
             <div className="flex items-center gap-1.5">
               <span className={`w-2 h-2 rounded-full ${backendStatus === 'connected' ? 'bg-emerald-500 animate-pulse' : 'bg-amber-500'}`} />
               <span className="text-[10px] text-apple-secondary font-bold hidden sm:inline uppercase tracking-wide">
-                {backendStatus === 'connected' ? 'Local API Online' : 'Client Demo Mode'}
+                {backendStatus === 'connected' ? 'API Online' : 'Client Demo Mode'}
               </span>
             </div>
           </div>
@@ -322,7 +322,7 @@ export default function Demo() {
                     <div>
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-[10px] font-bold text-apple-blue uppercase tracking-widest">
-                          Local NLP Report
+                          NLP Report
                         </span>
                         {/* Reading Time */}
                         <div className="flex items-center gap-1.5 text-xs text-apple-secondary font-semibold bg-white px-3 py-1 rounded-full border border-apple-border/20 shadow-sm">

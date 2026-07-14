@@ -137,7 +137,7 @@ export default function Hero() {
                 <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-apple-blue shadow-inner mb-3">
                   <BrainCircuit size={24} className="animate-pulse" />
                 </div>
-                <h4 className="text-xs font-bold text-apple-text mb-1">Local NLP Engine</h4>
+                <h4 className="text-xs font-bold text-apple-text mb-1">NLP Engine</h4>
                 <p className="text-[10px] text-apple-secondary leading-normal">
                   Extractive Summarization & NLTK Tokenization
                 </p>

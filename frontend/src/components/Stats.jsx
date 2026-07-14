@@ -62,7 +62,7 @@ export default function Stats() {
       targetValue: "100",
       suffix: "%",
       label: "Offline Processing",
-      description: "Zero external network calls, total local privacy."
+      description: "Zero external network calls, total privacy."
     }
   ];
 

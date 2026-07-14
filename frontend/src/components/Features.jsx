@@ -7,7 +7,7 @@ export default function Features() {
     {
       icon: <FileUp size={24} className="text-apple-blue" />,
       title: "Smart PDF Upload",
-      description: "Drag and drop standard PDF files. Automatic layout analysis and plain text extraction run locally on your browser and processor.",
+      description: "Drag and drop standard PDF files. Automatic layout analysis and plain text extraction run on your browser and processor.",
       color: "from-blue-500/10 to-cyan-500/10"
     },
     {
@@ -25,7 +25,7 @@ export default function Features() {
     {
       icon: <Hash size={24} className="text-amber-500" />,
       title: "Keyword Extraction",
-      description: "Automatically identify critical terms, key concepts, and jargon tags within the document using local statistical indexing.",
+      description: "Automatically identify critical terms, key concepts, and jargon tags within the document using statistical indexing.",
       color: "from-amber-500/10 to-orange-500/10"
     },
     {
@@ -90,7 +90,7 @@ export default function Features() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-base text-apple-secondary leading-relaxed"
           >
-            By executing all processing inside your local environment, we guarantee high speed, zero data storage risks, and full functionality even without an internet connection.
+            By executing all processing inside your browser environment, we guarantee high speed, zero data storage risks, and full functionality even without an internet connection.
           </motion.p>
         </div>
 

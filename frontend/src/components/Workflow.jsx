@@ -13,7 +13,7 @@ export default function Workflow() {
     {
       icon: <FileSpreadsheet size={20} />,
       title: "Extract Text",
-      description: "Local PyPDF2 parser extracts raw layout text and segments it into memory.",
+      description: "PyPDF2 parser extracts raw layout text and segments it into memory.",
       color: "bg-cyan-500/10 text-cyan-600"
     },
     {
@@ -55,7 +55,7 @@ export default function Workflow() {
             How it works
           </h2>
           <p className="text-base text-apple-secondary leading-relaxed">
-            A seamless local pipelines that processes raw documents and prepares them for intelligent search and reading.
+            A seamless pipeline that processes raw documents and prepares them for intelligent search and reading.
           </p>
         </div>
 
