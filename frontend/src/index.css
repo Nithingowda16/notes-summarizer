@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-apple-bg: #FFFFFF;
+  --color-apple-section: #F5F5F7;
+  --color-apple-text: #1D1D1F;
+  --color-apple-secondary: #6E6E73;
+  --color-apple-blue: #0071E3;
+  --color-apple-border: #D2D2D7;
+  
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  --radius-apple: 28px;
+  --radius-apple-lg: 32px;
+  
+  --shadow-apple-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+  --shadow-apple-hover: 0 20px 40px 0 rgba(0, 0, 0, 0.12);
+  --shadow-blue-glow: 0 0 20px 0 rgba(0, 113, 227, 0.3);
+}
+
+body {
+  @apply font-sans bg-white text-apple-text transition-colors duration-300;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Premium Glass & Layout Classes */
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.dark .glass-card {
+  background: rgba(28, 28, 30, 0.75) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark .glass-nav {
+  background: rgba(28, 28, 30, 0.75) !important;
+  backdrop-filter: saturate(180%) blur(20px) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.apple-input {
+  @apply w-full px-4 py-3 bg-apple-section rounded-2xl border border-transparent focus:border-apple-blue focus:bg-white focus:outline-none transition-all duration-200 text-apple-text placeholder-apple-secondary text-sm;
+}
+
+.btn-primary {
+  @apply px-6 py-2.5 bg-apple-blue text-white rounded-full font-medium hover:bg-apple-blue/90 active:scale-95 transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none flex items-center justify-center gap-2 cursor-pointer;
+}
+
+.btn-outline {
+  @apply px-6 py-2.5 border border-apple-border text-apple-text hover:bg-apple-section rounded-full font-medium active:scale-95 transition-all duration-200 focus:outline-none flex items-center justify-center gap-2 cursor-pointer;
+}
+
+.dark .btn-outline {
+  @apply border-zinc-700 text-zinc-300 hover:bg-zinc-800;
+}
+
+/* Animations and Floating effects */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes float-slow {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(-1.5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes float-reverse {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(8px) rotate(-1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float-pdf {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-float-brain {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+.animate-float-bubble {
+  animation: float-reverse 6s ease-in-out infinite;
+}
+
+.animate-float-card {
+  animation: float 8s ease-in-out infinite;
+}
+
+/* Ripple animation effect for buttons */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+}
+
+.ripple:active::after {
+  transform: scale(0, 0);
+  opacity: .3;
+  transition: 0s;
+}
